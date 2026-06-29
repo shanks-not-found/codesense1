@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+  --color-panel: #111113;
+  --color-base: #0A0A0C;
+  --color-code: #0E0E10;
+  --color-border-main: #27272A;
+}
+
+body {
+  background-color: var(--color-base);
+  color: #E4E4E7;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #18181B; }
+::-webkit-scrollbar-thumb { background: #3F3F46; border-radius: 3px; }
+
+.markdown-body {
+  @apply text-zinc-300 leading-relaxed space-y-4 text-sm;
+}
+
+.markdown-body h1 {
+  @apply text-xl font-semibold mt-6 mb-4 text-zinc-100 border-b border-border-main pb-2;
+}
+
+.markdown-body h2 {
+  @apply text-lg font-semibold mt-5 mb-3 text-zinc-100;
+}
+
+.markdown-body h3 {
+  @apply text-base font-medium mt-4 mb-2 text-zinc-200;
+}
+
+.markdown-body p {
+  @apply mb-4;
+}
+
+.markdown-body ul {
+  @apply list-disc list-inside mb-4 space-y-1 text-zinc-400;
+}
+
+.markdown-body ol {
+  @apply list-decimal list-inside mb-4 space-y-1 text-zinc-400;
+}
+
+.markdown-body a {
+  @apply text-indigo-400 hover:underline;
+}
+
+.markdown-body blockquote {
+  @apply border-l-4 border-indigo-500/50 pl-4 italic text-zinc-400 bg-indigo-500/5 py-2 pr-4 rounded-r-md;
+}
+
+.markdown-body code {
+  @apply font-mono text-[13px] bg-black/40 px-1.5 py-0.5 rounded text-indigo-300 border border-white/5;
+}
+
+.markdown-body pre {
+  @apply bg-black/50 text-zinc-300 p-4 rounded-lg overflow-x-auto mb-4 border border-border-main shadow-inner;
+}
+
+.markdown-body pre code {
+  @apply bg-transparent p-0 text-inherit text-[13px] border-none shadow-none;
+}
+
+.markdown-body table {
+  @apply min-w-full divide-y divide-border-main border border-border-main mb-4 rounded-md overflow-hidden text-sm;
+}
+
+.markdown-body th {
+  @apply px-4 py-2 bg-black/40 text-left font-semibold text-zinc-200;
+}
+
+.markdown-body td {
+  @apply px-4 py-2 text-zinc-400 border-t border-border-main;
+}

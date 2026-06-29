@@ -1,0 +1,6 @@
+{
+  "name": "CodeSense AI",
+  "description": "An AI-powered code review assistant that analyzes source code, explains logic, detects bugs, and identifies security vulnerabilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
